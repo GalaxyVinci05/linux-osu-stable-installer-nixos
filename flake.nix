@@ -11,7 +11,6 @@
       pkgs = nixpkgs.legacyPackages.${system};
       osuInstaller = pkgs.callPackage ./osu-pkg.nix { };
     in {
-      packages.${system}.osu-installer = osuInstaller;
       packages.${system}.default = osuInstaller;
     };
 }
